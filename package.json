@@ -2,8 +2,17 @@
   "name": "@mintuz/react-css-loader",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "description": "A React HOC that provides functionality for rendering CSS per component",
+  "description": "A React high order component that provides functionality for tree shaking CSS per component",
   "homepage": "http://github.com/mintuz/react-css-loader/tree/master",
+  "keywords": [
+    "CSS Loader",
+    "React CSS Loader",
+    "Tree Shaking CSS",
+    "Tree Shake CSS",
+    "Tree Shake",
+    "CSS",
+    "CSS Tree shaking"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mintuz/react-css-loader.git"
@@ -11,6 +20,7 @@
   "bugs": {
     "url": "https://github.com/mintuz/react-css-loader/issues"
   },
+  "license": "MIT",
   "scripts": {
     "prettier": "prettier --arrow-parens=always --single-quote --tab-width=4 --print-width=80 \"./src/**/*.js\" \"./test/**/*js\" --write",
     "babel": "babel src --out-dir dist --ignore '**/*.test.js'",
