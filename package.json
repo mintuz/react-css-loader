@@ -31,7 +31,8 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
-      ".node_modules/"
+      ".node_modules/",
+      ".dist/"
     ],
     "setupFiles": [
       "./jest-setup.js"
