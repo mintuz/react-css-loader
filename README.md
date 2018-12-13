@@ -2,12 +2,12 @@
 A library to load and tree shake standard CSS with a simple, flexible interface allowing you to only load the CSS you need and want, dependent on if your react components are rendering.
 
 ## Getting started
-To install run `npm install react-css-loader --save`
+To install run `npm install @mintuz/react-css-loader --save`
 
 ## Usage
 
 ### Client
-React CSS Loader provides a Higher Order Component which you pass your own components into and optionally an object as a second paramter with a function called `styles`.
+React CSS Loader provides a Higher Order Component which you pass your own components into and optionally an object as a second parameter with a function called `styles`.
 
 When a displayName is present on your component, react-css-loader will try to resolve the displayName to a css file on the server. For example if you had a displayName of `Header` it will try to resolve to `Header.css`.
 
@@ -16,7 +16,7 @@ You can also define your own styles using the styles function which should retur
 ```
 /* ./app.js */
 import React from 'react';
-import {StaticCSS as CSS} from 'react-css-loader';
+import {StaticCSS as CSS} from '@mintuz/react-css-loader';
 
 const MyComponent = () => {
     return <div className="my-custom-element"/>;
@@ -43,7 +43,7 @@ The file system adapter will resolve css files from your local file system and a
 
 ```
 import App from './app'; /* React application */
-import {Resolver, FileSystemAdapter} from 'react-css-loader';
+import {Resolver, FileSystemAdapter} from '@mintuz/react-css-loader';
 
 const cssResolver = new Resolver(App, new FileSystemAdapter({
     folderPath: `${__dirname}/styles/`,
@@ -70,7 +70,7 @@ console.log(cssString);
 
 ```
 import App from './app';
-import {Resolver, FileSystemAdapter} from 'react-css-loader';
+import {Resolver, FileSystemAdapter} from '@mintuz/react-css-loader';
 
 const cssResolver = new Resolver(App, new FileSystemAdapter({
     folderPath: `${__dirname}/styles/`,
@@ -95,7 +95,7 @@ If you serve your CSS via a CDN, this is for you. Rather than resolving the CSS 
 
 ```
 import App from './app';
-import {Resolver, CDNAdapter} from 'react-css-loader';
+import {Resolver, CDNAdapter} from '@mintuz/react-css-loader';
 
 const cssResolver = new Resolver(App, new CDNAdapter({
     cdnRoot: 'https://my-cdn.com'
