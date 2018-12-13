@@ -45,7 +45,7 @@ The file system adapter will resolve css files from your local file system and a
 import App from './app'; /* React application */
 import {Resolver, FileSystemAdapter} from 'react-css-loader';
 
-const cssResolver = Resolver(App, new FileSystemAdapter({
+const cssResolver = new Resolver(App, new FileSystemAdapter({
     folderPath: `${__dirname}/styles/`,
     inline: true,
 }));
@@ -72,7 +72,7 @@ console.log(cssString);
 import App from './app';
 import {Resolver, FileSystemAdapter} from 'react-css-loader';
 
-const cssResolver = Resolver(App, new FileSystemAdapter({
+const cssResolver = new Resolver(App, new FileSystemAdapter({
     folderPath: `${__dirname}/styles/`,
     inline: false,
 }));
@@ -97,7 +97,7 @@ If you serve your CSS via a CDN, this is for you. Rather than resolving the CSS 
 import App from './app';
 import {Resolver, CDNAdapter} from 'react-css-loader';
 
-const cssResolver = Resolver(App, new CDNAdapter({
+const cssResolver = new Resolver(App, new CDNAdapter({
     cdnRoot: 'https://my-cdn.com'
 }));
 

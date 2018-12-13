@@ -2,6 +2,7 @@
   "name": "@mintuz/react-css-loader",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "private": false,
   "description": "A React high order component that provides functionality for tree shaking CSS per component",
   "homepage": "http://github.com/mintuz/react-css-loader/tree/master",
   "keywords": [
