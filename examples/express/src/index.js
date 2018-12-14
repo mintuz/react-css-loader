@@ -8,11 +8,13 @@ import { Resolver, FileSystemAdapter } from '../../../dist/index';
 const app = express();
 
 app.get('/', (req, res) => {
-    const htmlBody = ReactDOMServer.renderToString(React.createElement(App, {
+    const app = React.createElement(App, {
         bodyText: 'hello world, from the server yo',
-    }));
+    });
 
-    const resolver = new Resolver(App, new FileSystemAdapter({
+    const htmlBody = ReactDOMServer.renderToString(app);
+
+    const resolver = new Resolver(app, new FileSystemAdapter({
         folderPath: `${path}/styles`,
         inline: true,
     }));
