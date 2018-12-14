@@ -34,7 +34,7 @@ describe('Resolver', () => {
         };
 
         const resolver = new Resolver(
-            CustomApp,
+            React.createElement(CustomApp),
             new FileSystemAdapter({
                 folderPath: __dirname,
                 inline: false
@@ -51,7 +51,7 @@ describe('Resolver', () => {
     describe('FileSystem Adapter', () => {
         test('Should return CSS for a single module', async () => {
             const resolver = new Resolver(
-                CSS(buildComponent('MyComponent')),
+                React.createElement(CSS(buildComponent('MyComponent'))),
                 new FileSystemAdapter({
                     folderPath: __dirname,
                     inline: false
@@ -79,7 +79,7 @@ describe('Resolver', () => {
             };
 
             const resolver = new Resolver(
-                CustomApp,
+                React.createElement(CustomApp),
                 new FileSystemAdapter({
                     folderPath: __dirname,
                     inline: false
@@ -113,7 +113,7 @@ describe('Resolver', () => {
             };
 
             const resolver = new Resolver(
-                CustomApp,
+                React.createElement(CustomApp),
                 new FileSystemAdapter({
                     folderPath: __dirname,
                     inline: false
@@ -146,7 +146,7 @@ describe('Resolver', () => {
             });
 
             const resolver = new Resolver(
-                MockComponentOne,
+                React.createElement(MockComponentOne),
                 new FileSystemAdapter({
                     folderPath: __dirname,
                     inline: false
@@ -181,7 +181,7 @@ describe('Resolver', () => {
                 };
 
                 const resolver = new Resolver(
-                    CustomApp,
+                    React.createElement(CustomApp),
                     new FileSystemAdapter({
                         folderPath: __dirname,
                         inline: false
@@ -208,7 +208,7 @@ describe('Resolver', () => {
                 };
 
                 const resolver = new Resolver(
-                    CustomApp,
+                    React.createElement(CustomApp),
                     new FileSystemAdapter({
                         folderPath: __dirname,
                         inline: true
@@ -238,7 +238,7 @@ describe('Resolver', () => {
             };
 
             const resolver = new Resolver(
-                CustomApp,
+                React.createElement(CustomApp),
                 new CDNAdapter({
                     cdnRoot: 'https://my-cdn.com'
                 })

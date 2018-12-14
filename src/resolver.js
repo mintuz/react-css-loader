@@ -10,24 +10,21 @@ export default class Resolver {
         let styles = [];
         let components = [];
 
-        return reactTreeWalker(
-            React.createElement(this.app),
-            (element, instance) => {
-                if (instance && instance.getStyles) {
-                    const stylesObject = instance.getStyles();
-                    const alreadyContainStyle = styles.some((e) =>
-                        stylesObject.stylePaths.includes(e)
-                    );
+        return reactTreeWalker(this.app, (element, instance) => {
+            if (instance && instance.getStyles) {
+                const stylesObject = instance.getStyles();
+                const alreadyContainStyle = styles.some((e) =>
+                    stylesObject.stylePaths.includes(e)
+                );
 
-                    if (alreadyContainStyle) {
-                        return;
-                    }
-
-                    styles = [...styles, ...stylesObject.stylePaths];
-                    components = [...components, stylesObject.componentName];
+                if (alreadyContainStyle) {
+                    return;
                 }
+
+                styles = [...styles, ...stylesObject.stylePaths];
+                components = [...components, stylesObject.componentName];
             }
-        ).then(() => {
+        }).then(() => {
             return this.adapter.resolve(styles, components);
         });
     }
