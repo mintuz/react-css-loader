@@ -3,12 +3,12 @@ import Header from './Header';
 import Body from './Body';
 import { StaticCSS as CSS } from '../../../../dist';
 
-function Root() {
+function Root(props) {
     return (
         <React.Fragment>
             <Header />
             <div>
-                <Body />
+                <Body text={props.bodyText}/>
             </div>
         </React.Fragment>
     );

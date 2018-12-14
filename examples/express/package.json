@@ -6,7 +6,7 @@
   "scripts": {
     "babel": "babel src --out-dir dist",
     "build": "npm run babel",
-    "local": "node dist/index.js"
+    "local": "npm run build && node dist/index.js"
   },
   "author": "Adam Bulmer",
   "license": "MIT",
