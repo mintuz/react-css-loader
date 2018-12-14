@@ -3,9 +3,11 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { path } from 'app-root-path';
 import App from './App';
-import { Resolver, FileSystemAdapter } from '../../../dist/index';
+import { Resolver, CDNAdapter } from '../../../dist/index';
 
 const app = express();
+
+app.use(express.static('styles'));
 
 app.get('/', (req, res) => {
     const app = React.createElement(App, {
@@ -14,9 +16,8 @@ app.get('/', (req, res) => {
 
     const htmlBody = ReactDOMServer.renderToString(app);
 
-    const resolver = new Resolver(app, new FileSystemAdapter({
-        folderPath: `${path}/styles`,
-        inline: true,
+    const resolver = new Resolver(app, new CDNAdapter({
+        cdnRoot: ``
     }));
 
     resolver.render()
