@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
     });
 
     const htmlBody = ReactDOMServer.renderToString(app);
+    const perfstart = process.hrtime();
 
     const resolver = new Resolver(app, new CDNAdapter({
         cdnRoot: ``
@@ -22,6 +23,9 @@ app.get('/', (req, res) => {
 
     resolver.render()
         .then(css => {
+            const perfEnd = process.hrtime(perfstart);
+            console.log('CSS Render time: %ds %dms', perfEnd[0], perfEnd[1] / 1000000);
+
             res.send(`
             <html>
                 <head>
@@ -35,6 +39,6 @@ app.get('/', (req, res) => {
         });
 });
 
-app.listen(8080, () => {
-    console.log('Example application running');
+app.listen(8181, () => {
+    console.log('Example application running on port 8181');
 });
