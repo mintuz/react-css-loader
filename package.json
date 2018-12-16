@@ -1,6 +1,6 @@
 {
   "name": "@mintuz/react-css-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "private": false,
   "description": "A React high order component that provides functionality for tree shaking CSS per component",
@@ -42,7 +42,6 @@
   },
   "author": "Adam Bulmer",
   "dependencies": {
-    "bluebird": "^3.5.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-tree-walker": "^4.1.0"

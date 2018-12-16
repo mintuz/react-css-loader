@@ -1,7 +1,7 @@
-import Promise from 'bluebird';
+import util from 'util';
 import fs from 'fs';
 
-const readFile = Promise.promisify(fs.readFile);
+const readFile = util.promisify(fs.readFile);
 
 function fileExists(filePath) {
     try {
