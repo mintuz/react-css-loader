@@ -2,7 +2,6 @@
 [![npm package](https://img.shields.io/npm/v/@mintuz/react-css-loader.svg)](https://www.npmjs.org/package/@mintuz/react-css-loader)
 [![NPM downloads](http://img.shields.io/npm/dm/@mintuz/react-css-loader.svg)](https://npmjs.org/package/@mintuz/react-css-loader)
 [![NPM license](https://img.shields.io/npm/l/@mintuz/react-css-loader.svg)](https://npmjs.org/package/@mintuz/react-css-loader)
-[![Bundle size](https://img.shields.io/bundlephobia/minzip/@mintuz/react-css-loader.svg)](https://npmjs.org/package/@mintuz/react-css-loader)
 
 A library to load and tree shake standard CSS with a simple, flexible interface allowing you to only load the CSS you need and want, dependent on if your react components are rendering.
 
