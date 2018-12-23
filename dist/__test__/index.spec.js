@@ -6,7 +6,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _enzyme = require('enzyme');
 
-var _ = require('../');
+var _index = require('../../index');
+
+var _server = require('../../server');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33,8 +35,8 @@ describe('Resolver', function () {
             while (1) {
                 switch (_context.prev = _context.next) {
                     case 0:
-                        MockComponentOne = (0, _.StaticCSS)(buildComponent('MyComponent'));
-                        MockComponentTwo = (0, _.StaticCSS)(buildComponent('MyComponent2'));
+                        MockComponentOne = (0, _index.StaticCSS)(buildComponent('MyComponent'));
+                        MockComponentTwo = (0, _index.StaticCSS)(buildComponent('MyComponent2'));
 
                         CustomApp = function CustomApp() {
                             return _react2.default.createElement(
@@ -48,7 +50,7 @@ describe('Resolver', function () {
                             );
                         };
 
-                        resolver = new _.Resolver(_react2.default.createElement(CustomApp), new _.FileSystemAdapter({
+                        resolver = new _server.Resolver(_react2.default.createElement(CustomApp), new _server.FileSystemAdapter({
                             folderPath: __dirname,
                             inline: false
                         }));
@@ -78,7 +80,7 @@ describe('Resolver', function () {
                 while (1) {
                     switch (_context2.prev = _context2.next) {
                         case 0:
-                            resolver = new _.Resolver(_react2.default.createElement((0, _.StaticCSS)(buildComponent('MyComponent'))), new _.FileSystemAdapter({
+                            resolver = new _server.Resolver(_react2.default.createElement((0, _index.StaticCSS)(buildComponent('MyComponent'))), new _server.FileSystemAdapter({
                                 folderPath: __dirname,
                                 inline: false
                             }));
@@ -108,8 +110,8 @@ describe('Resolver', function () {
                 while (1) {
                     switch (_context3.prev = _context3.next) {
                         case 0:
-                            MockComponentOne = (0, _.StaticCSS)(buildComponent('MyComponent'));
-                            MockComponentTwo = (0, _.StaticCSS)(buildComponent('MyComponent2'));
+                            MockComponentOne = (0, _index.StaticCSS)(buildComponent('MyComponent'));
+                            MockComponentTwo = (0, _index.StaticCSS)(buildComponent('MyComponent2'));
 
                             CustomApp = function CustomApp() {
                                 return _react2.default.createElement(
@@ -119,7 +121,7 @@ describe('Resolver', function () {
                                 );
                             };
 
-                            resolver = new _.Resolver(_react2.default.createElement(CustomApp), new _.FileSystemAdapter({
+                            resolver = new _server.Resolver(_react2.default.createElement(CustomApp), new _server.FileSystemAdapter({
                                 folderPath: __dirname,
                                 inline: false
                             }));
@@ -155,8 +157,8 @@ describe('Resolver', function () {
                 while (1) {
                     switch (_context4.prev = _context4.next) {
                         case 0:
-                            MockComponentOne = (0, _.StaticCSS)(buildComponent('MyComponent'));
-                            MockComponentTwo = (0, _.StaticCSS)(buildComponent('MyComponent-invalid'));
+                            MockComponentOne = (0, _index.StaticCSS)(buildComponent('MyComponent'));
+                            MockComponentTwo = (0, _index.StaticCSS)(buildComponent('MyComponent-invalid'));
 
                             CustomApp = function CustomApp() {
                                 return _react2.default.createElement(
@@ -166,7 +168,7 @@ describe('Resolver', function () {
                                 );
                             };
 
-                            resolver = new _.Resolver(_react2.default.createElement(CustomApp), new _.FileSystemAdapter({
+                            resolver = new _server.Resolver(_react2.default.createElement(CustomApp), new _server.FileSystemAdapter({
                                 folderPath: __dirname,
                                 inline: false
                             }));
@@ -204,12 +206,12 @@ describe('Resolver', function () {
                 while (1) {
                     switch (_context5.prev = _context5.next) {
                         case 0:
-                            MockComponentOne = (0, _.StaticCSS)(buildComponent('MyComponent'), {
+                            MockComponentOne = (0, _index.StaticCSS)(buildComponent('MyComponent'), {
                                 styles: function styles() {
                                     return ['UserDefinedStyles.css'];
                                 }
                             });
-                            resolver = new _.Resolver(_react2.default.createElement(MockComponentOne), new _.FileSystemAdapter({
+                            resolver = new _server.Resolver(_react2.default.createElement(MockComponentOne), new _server.FileSystemAdapter({
                                 folderPath: __dirname,
                                 inline: false
                             }));
@@ -246,8 +248,8 @@ describe('Resolver', function () {
                     while (1) {
                         switch (_context6.prev = _context6.next) {
                             case 0:
-                                MockComponentOne = (0, _.StaticCSS)(buildComponent('MyComponent'));
-                                MockComponentTwo = (0, _.StaticCSS)(buildComponent('MyComponent2'));
+                                MockComponentOne = (0, _index.StaticCSS)(buildComponent('MyComponent'));
+                                MockComponentTwo = (0, _index.StaticCSS)(buildComponent('MyComponent2'));
 
                                 CustomApp = function CustomApp() {
                                     return _react2.default.createElement(
@@ -257,7 +259,7 @@ describe('Resolver', function () {
                                     );
                                 };
 
-                                resolver = new _.Resolver(_react2.default.createElement(CustomApp), new _.FileSystemAdapter({
+                                resolver = new _server.Resolver(_react2.default.createElement(CustomApp), new _server.FileSystemAdapter({
                                     folderPath: __dirname,
                                     inline: false
                                 }));
@@ -284,8 +286,8 @@ describe('Resolver', function () {
                     while (1) {
                         switch (_context7.prev = _context7.next) {
                             case 0:
-                                MockComponentOne = (0, _.StaticCSS)(buildComponent('MyComponent'));
-                                MockComponentTwo = (0, _.StaticCSS)(buildComponent('MyComponent2'));
+                                MockComponentOne = (0, _index.StaticCSS)(buildComponent('MyComponent'));
+                                MockComponentTwo = (0, _index.StaticCSS)(buildComponent('MyComponent2'));
 
                                 CustomApp = function CustomApp() {
                                     return _react2.default.createElement(
@@ -295,7 +297,7 @@ describe('Resolver', function () {
                                     );
                                 };
 
-                                resolver = new _.Resolver(_react2.default.createElement(CustomApp), new _.FileSystemAdapter({
+                                resolver = new _server.Resolver(_react2.default.createElement(CustomApp), new _server.FileSystemAdapter({
                                     folderPath: __dirname,
                                     inline: true
                                 }));
@@ -325,8 +327,8 @@ describe('Resolver', function () {
                 while (1) {
                     switch (_context8.prev = _context8.next) {
                         case 0:
-                            MockComponentOne = (0, _.StaticCSS)(buildComponent('MyComponent'));
-                            MockComponentTwo = (0, _.StaticCSS)(buildComponent('MyComponent2'));
+                            MockComponentOne = (0, _index.StaticCSS)(buildComponent('MyComponent'));
+                            MockComponentTwo = (0, _index.StaticCSS)(buildComponent('MyComponent2'));
 
                             CustomApp = function CustomApp() {
                                 return _react2.default.createElement(
@@ -336,7 +338,7 @@ describe('Resolver', function () {
                                 );
                             };
 
-                            resolver = new _.Resolver(_react2.default.createElement(CustomApp), new _.CDNAdapter({
+                            resolver = new _server.Resolver(_react2.default.createElement(CustomApp), new _server.CDNAdapter({
                                 cdnRoot: 'https://my-cdn.com'
                             }));
                             _context8.next = 6;
@@ -364,7 +366,7 @@ describe('Dynamic CSS React Container', function () {
             children: 'My fake content'
         };
 
-        var Component = (0, _.DynamicCSS)(buildComponent('MyComponent'));
+        var Component = (0, _index.DynamicCSS)(buildComponent('MyComponent'));
         var instance = (0, _enzyme.mount)(_react2.default.createElement(Component, fakeProps));
 
         expect(Component.displayName).toEqual('DynamicCSS');
@@ -380,7 +382,7 @@ describe('Dynamic CSS React Container', function () {
             while (1) {
                 switch (_context9.prev = _context9.next) {
                     case 0:
-                        resolver = new _.Resolver((0, _.DynamicCSS)(buildComponent()), new _.FileSystemAdapter({
+                        resolver = new _server.Resolver((0, _index.DynamicCSS)(buildComponent()), new _server.FileSystemAdapter({
                             folderPath: __dirname,
                             inline: false
                         }));
@@ -408,7 +410,7 @@ describe('Static CSS React Container', function () {
             children: 'My fake content'
         };
 
-        var Component = (0, _.StaticCSS)(buildComponent('MyComponent'));
+        var Component = (0, _index.StaticCSS)(buildComponent('MyComponent'));
         var instance = (0, _enzyme.mount)(_react2.default.createElement(Component, fakeProps));
 
         expect(Component.displayName).toEqual('StaticCSS');
@@ -424,7 +426,7 @@ describe('Static CSS React Container', function () {
             while (1) {
                 switch (_context10.prev = _context10.next) {
                     case 0:
-                        resolver = new _.Resolver((0, _.StaticCSS)(buildComponent()), new _.FileSystemAdapter({
+                        resolver = new _server.Resolver((0, _index.StaticCSS)(buildComponent()), new _server.FileSystemAdapter({
                             folderPath: __dirname,
                             inline: false
                         }));
