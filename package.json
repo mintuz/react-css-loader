@@ -1,7 +1,7 @@
 {
   "name": "@mintuz/react-css-loader",
-  "version": "1.0.4",
-  "main": "dist/index.js",
+  "version": "2.0.0",
+  "main": "server.js",
   "private": false,
   "description": "A React high order component that provides functionality for tree shaking CSS per component",
   "homepage": "http://github.com/mintuz/react-css-loader/tree/master",
@@ -34,7 +34,9 @@
     "testPathIgnorePatterns": [
       ".node_modules/",
       ".dist/",
-      ".examples/"
+      ".examples/",
+      "./server.js",
+      "./index.js"
     ],
     "setupFiles": [
       "./jest-setup.js"
