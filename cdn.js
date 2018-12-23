@@ -1,1 +1,1 @@
-module.exports = require('./dist/adapter/file').default;
+module.exports = require('./dist/adapter/cdn').default;

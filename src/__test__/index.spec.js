@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { StaticCSS as CSS, DynamicCSS, Resolver } from '../../index';
+import { StaticCSS as CSS, DynamicCSS, Resolver } from '../../';
 import FileSystemAdapter from '../../file';
 import CDNAdapter from '../../cdn';
 

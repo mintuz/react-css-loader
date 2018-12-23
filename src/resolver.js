@@ -29,7 +29,9 @@ export default class Resolver {
         });
     }
     render() {
+        console.log("hello");
         return this.resolve().then((rawResponse) => {
+            console.log(rawResponse);
             return this.adapter.render(rawResponse);
         });
     }
