@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { path } from 'app-root-path';
 import App from './App';
-import { Resolver, FileSystemAdapter } from '../../../dist/index';
+import { Resolver, FileSystemAdapter } from '../../../server';
 
 const app = express();
 

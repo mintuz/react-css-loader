@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticCSS as CSS } from '../../../../dist';
+import { StaticCSS as CSS } from '../../../../index';
 
 function Body(props) {
     return (

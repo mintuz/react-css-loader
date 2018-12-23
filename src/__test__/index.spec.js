@@ -1,12 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import {
-    StaticCSS as CSS,
-    DynamicCSS,
-    Resolver,
-    FileSystemAdapter,
-    CDNAdapter
-} from '../';
+import { StaticCSS as CSS, DynamicCSS } from '../../index';
+import { Resolver, FileSystemAdapter, CDNAdapter } from '../../server';
 
 function buildComponent(displayName) {
     function MyComponent(props) {
