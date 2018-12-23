@@ -6,9 +6,6 @@ workflow "Build, Test, and Publish" {
 action "Build" {
   uses = "actions/npm@master"
   args = "install"
-  env = {
-    NODE_ENV = "production"
-  }
 }
 
 action "Test" {
