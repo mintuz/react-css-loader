@@ -1,9 +1,3 @@
-const Resolver = require('./dist/resolver');
-const FileSystemAdapter = require('./dist/adapter/file');
-const CDNAdapter = require('./dist/adapter/cdn');
-
-module.exports = {
-    Resolver: Resolver,
-    FileSystemAdapter: FileSystemAdapter,
-    CDNAdapter: CDNAdapter,
-};
+export { default as Resolver } from './dist/resolver';
+export { default as FileSystemAdapter } from './dist/adapter/file';
+export { default as CDNAdapter } from './dist/adapter/cdn';

@@ -11,7 +11,7 @@ function fileExists(filePath) {
     }
 }
 
-export default class FileSystem {
+export default class FileSystemAdapter {
     constructor(opts) {
         this.folderPath = opts.folderPath;
         this.inline = opts.inline;

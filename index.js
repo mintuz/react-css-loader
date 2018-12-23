@@ -1,7 +1,2 @@
-const StaticCSS = require('./dist/static-container');
-const DynamicCSS = require('./dist/dynamic-container');
-
-module.exports = {
-    StaticCSS: StaticCSS,
-    DynamicCSS: DynamicCSS,
-};
+export { default as StaticCSS } from './dist/static-container';
+export { default as DynamicCSS } from './dist/dynamic-container';

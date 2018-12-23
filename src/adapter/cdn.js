@@ -1,4 +1,4 @@
-export default class CDN {
+export default class CDNAdapter {
     constructor(opts) {
         this.cdnRoot = opts.cdnRoot;
     }
