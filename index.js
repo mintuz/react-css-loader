@@ -1,3 +1,9 @@
-export { default as StaticCSS } from './dist/static-container';
-export { default as DynamicCSS } from './dist/dynamic-container';
-export { default as Resolver } from './dist/resolver';
+console.log("helo");
+console.log(require('./dist/static-container'));
+
+module.exports = {
+    StaticCSS: require('./dist/static-container').default,
+    DynamicCSS: require('./dist/dynamic-container').default,
+    Resolver: require('./dist/resolver').default,
+};
+

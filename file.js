@@ -1,3 +1,1 @@
-
-import FileAdapter from './dist/adapter/file';
-export default FileAdapter;
+module.exports = require('./dist/adapter/file').default;

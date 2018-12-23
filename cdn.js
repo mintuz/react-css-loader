@@ -1,2 +1,1 @@
-import CDNAdapter from './dist/adapter/cdn';
-export default CDNAdapter;
+module.exports = require('./dist/adapter/file').default;
