@@ -24,7 +24,7 @@
   "license": "MIT",
   "scripts": {
     "prepublish": "npm run build && npm run test",
-    "prettier": "prettier --arrow-parens=always --single-quote --tab-width=4 --print-width=80 \"./src/**/*.js\" \"./test/**/*js\" --write",
+    "prettier": "prettier --single-quote --tab-width=4 --print-width=80 \"./src/**/*.js\" \"./test/**/*js\" --write",
     "babel": "babel src --out-dir dist --ignore '**/*.test.js'",
     "test": "jest --coverage --no-cache",
     "build": "npm run babel",

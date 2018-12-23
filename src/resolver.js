@@ -13,7 +13,7 @@ export default class Resolver {
         return reactTreeWalker(this.app, (element, instance) => {
             if (instance && instance.getStyles) {
                 const stylesObject = instance.getStyles();
-                const alreadyContainStyle = styles.some((e) =>
+                const alreadyContainStyle = styles.some(e =>
                     stylesObject.stylePaths.includes(e)
                 );
 
@@ -29,7 +29,7 @@ export default class Resolver {
         });
     }
     render() {
-        return this.resolve().then((rawResponse) => {
+        return this.resolve().then(rawResponse => {
             return this.adapter.render(rawResponse);
         });
     }

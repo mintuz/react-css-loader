@@ -21,7 +21,7 @@ export default class FileSystemAdapter {
             styles.map((stylePath, index) => {
                 const filePath = `${this.folderPath}/${stylePath}`;
                 if (fileExists(filePath)) {
-                    return readFile(filePath, 'utf8').then((content) => {
+                    return readFile(filePath, 'utf8').then(content => {
                         return {
                             componentName: components[index],
                             error: null,
@@ -45,7 +45,7 @@ export default class FileSystemAdapter {
     render(rawResponse) {
         if (this.inline) {
             return rawResponse
-                .filter((style) => {
+                .filter(style => {
                     return style.success;
                 })
                 .reduce((result, style) => {
@@ -58,7 +58,7 @@ export default class FileSystemAdapter {
         }
 
         return rawResponse
-            .filter((style) => {
+            .filter(style => {
                 return style.success;
             })
             .reduce((result, style) => {

@@ -20,7 +20,7 @@ export default class CDNAdapter {
     }
     render(rawResponse) {
         return rawResponse
-            .filter((style) => {
+            .filter(style => {
                 return style.success;
             })
             .reduce((result, style) => {
