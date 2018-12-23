@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticCSS as CSS } from '../../../../index';
+import { StaticCSS as CSS } from '../../../../';
 
 function Header() {
     return (

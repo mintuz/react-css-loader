@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Body from './Body';
-import { StaticCSS as CSS } from '../../../../index';
+import { StaticCSS as CSS } from '../../../../';
 
 function Root(props) {
     return (

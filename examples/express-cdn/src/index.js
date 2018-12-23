@@ -2,7 +2,8 @@ import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import App from './App';
-import { Resolver, CDNAdapter } from '../../../server';
+import { Resolver } from '../../../';
+import CDNAdapter from '../../../cdn';
 
 const app = express();
 

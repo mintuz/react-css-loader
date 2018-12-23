@@ -20,7 +20,7 @@ You can also define your own styles using the styles function which should retur
 ```
 /* ./app.js */
 import React from 'react';
-import {StaticCSS as CSS} from '@mintuz/react-css-loader';
+import { StaticCSS as CSS } from '@mintuz/react-css-loader';
 
 const MyComponent = () => {
     return <div className="my-custom-element"/>;
@@ -47,7 +47,8 @@ The file system adapter will resolve css files from your local file system and a
 
 ```
 import App from './app'; /* React application */
-import {Resolver, FileSystemAdapter} from '@mintuz/react-css-loader/server';
+import { Resolver } from '@mintuz/react-css-loader';
+import FileSystemAdapter from '@mintuz/react-css-loader/file';
 
 const cssResolver = new Resolver(React.createElement(App), new FileSystemAdapter({
     folderPath: `${__dirname}/styles/`,
@@ -74,7 +75,8 @@ console.log(cssString);
 
 ```
 import App from './app';
-import {Resolver, FileSystemAdapter} from '@mintuz/react-css-loader/server';
+import { Resolver } from '@mintuz/react-css-loader';
+import FileSystemAdapter from '@mintuz/react-css-loader/file';
 
 const cssResolver = new Resolver(React.createElement(App), new FileSystemAdapter({
     folderPath: `${__dirname}/styles/`,
@@ -99,7 +101,8 @@ If you serve your CSS via a CDN, this is for you. Rather than resolving the CSS 
 
 ```
 import App from './app';
-import {Resolver, CDNAdapter} from '@mintuz/react-css-loader/server';
+import { Resolver } from '@mintuz/react-css-loader';
+import CDNAdapter from '@mintuz/react-css-loader/cdn';
 
 const cssResolver = new Resolver(React.createElement(App), new CDNAdapter({
     cdnRoot: 'https://my-cdn.com'
